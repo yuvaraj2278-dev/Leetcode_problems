@@ -1,5 +1,10 @@
-class Solution:
-    def isAcronym(self, words: List[str], s: str) -> bool:
+class Solution(object):
+    def isAcronym(self, words, s):
+        """
+        :type words: List[str]
+        :type s: str
+        :rtype: bool
+        """
         if len(s) != len(words):
             return False
         j = 0

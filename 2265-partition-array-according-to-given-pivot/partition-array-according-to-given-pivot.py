@@ -3,6 +3,7 @@ class Solution:
         n = len(nums)  
         left = []
         right = []
+        mid = []
         
 
         for i in nums:
@@ -11,6 +12,6 @@ class Solution:
             elif i > pivot:
                 right.append(i)
             else:
-                right.insert(0,i)    
-        return left + right       
+                mid.append(i)   
+        return left + mid + right       
                      

@@ -6,5 +6,7 @@ class Solution:
             if coins-i >= 0:
                 coins -= i
                 ans += 1
+            if i > coins:
+                return ans     
         return ans          
 

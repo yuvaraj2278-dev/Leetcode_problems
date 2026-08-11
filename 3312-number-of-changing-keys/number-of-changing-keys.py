@@ -1,7 +1,13 @@
 class Solution:
     def countKeyChanges(self, s: str) -> int:
-        ans = 0
-        for i in range(len(s) - 1):
-            if s[i] != s[i+1].lower() and s[i] != s[i+1].upper():
-                ans += 1
-        return ans        
+        s = s.lower()
+        count = 0
+        left = 0
+        right = 1
+
+        while right < len(s):
+            if s[left] != s[right]:
+                count += 1
+            left += 1
+            right += 1
+        return count         
